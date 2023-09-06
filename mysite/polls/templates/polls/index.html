@@ -1,0 +1,12 @@
+{% if latest_question_list %}
+<ul>
+    {% for question in latest_question_list %}
+</ul>
+<ul>
+    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text}}</a></li>
+    path('<int:question_id>/', views.detail, name='detail'),
+</ul>
+
+{% endfor %}
+    <p>No polls are available.</p>
+{% endif %}
